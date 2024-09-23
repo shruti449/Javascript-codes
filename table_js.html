@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function create() {
+            let ob1 = document.getElementById("t1")
+            let r1 = document.createElement("tr")
+            let c1 = document.createElement("td")
+            c1.innerText = "100"
+            c1.width = "50px"
+            let c2 = document.createElement("td")
+            c2.innerText = "ABC"
+            c2.width = "50px"
+            //insert td in tr
+            r1.append(c1)
+            r1.append(c2)
+            //insert tr in table
+            ob1.append(r1)
+
+        }
+    </script>
+</head>
+
+<body>
+    <table id="t1" border="1">
+
+    </table>
+    <input type="button" value="click here" onclick="create()">
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Return first and last name from a form </title>
+</head>
+<script>
+    function show(){
+    let ob=document.getElementById("t1")
+    let p=ob.value
+    let ob1=document.getElementById("t2")
+    let q=ob1.value
+    alert(`hello ${p} ${q}`)
+   
+    
+    let ob2=document.getElementById("d1")
+    ob2.style.width="100px"
+    ob2.style.height="100px"
+    ob2.style.backgroundColor="yellow"
+    ob2.style.border="2px solid black"
+    ob2.innerText="hello "+ p + q
+
+    }
+    
+</script>
+
+<body>
+    <form>
+        First name: <input type="text"  id="t1"><br>
+        Last name: <input type="text" id="t2"><br>
+        <input type="button" value="Submit" onclick="show()">
+    </form>
+    <div id="d1">
+
+    </div>
+</body>
+
+</html>

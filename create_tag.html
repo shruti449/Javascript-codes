@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+function create(){
+//create tag
+let ob1 = document.createElement("input")
+document.body.append(ob1)
+let ob2= document.createElement("input")
+ob2.type="button"
+ob2.value="ok"
+let ob3= document.getElementById("d1")
+ob3.append(ob2)
+}
+    </script>
+</head>
+<body>
+    <input type="button" value="click here" onclick="create()" >
+    <div id="d1" style="background-color: red; width: 200px; height: 200px;">
+
+    </div>
+</body>
+</html>
