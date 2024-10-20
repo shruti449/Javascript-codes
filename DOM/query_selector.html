@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        function show() {
+            //get only first element of query
+           let ob1 = document.querySelector(".class2")
+            ob1.style.width = "200px"
+            ob1.style.height = "200px"
+            ob1.style.backgroundColor = "aqua"
+
+            //get all elements by querySelectorAll
+            let ob2 = document.querySelectorAll(".class1")
+            for(const e of ob2){
+            e.style.width = "100px"
+            e.style.height = "100px"
+            e.style.backgroundColor = "red"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="class1">hello</div>
+    <p class="class2">this is paragraph1</p>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem veniam deserunt vitae voluptatem magnam
+        voluptas distinctio iusto! Minus sit eos voluptatum delectus hic eaque! Dolorem doloremque explicabo tempore ad
+        magnam?</div>
+    <p class="class1">this is paragraph2</p>
+    <div>this is div2</div>
+    <br>
+    <input type="button" value="click here" onclick="show()">
+</body>
+
+</html>

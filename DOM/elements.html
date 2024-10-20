@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+     function show(){
+        let ob=document.getElementById("d1")
+        for(const child of ob.childNodes){
+            console.log(child)
+        }
+        console.log("******")
+        for(const element of ob.children){
+            console.log(element)
+        }
+        console.log("******")
+        console.log(ob.parentElement)
+        console.log(ob.previousElementSibling)
+        console.log(ob.nextElementSibling)
+     }
+    </script>
+</head>
+<body>
+    <br>
+    <div id="d1">
+       <p></p>
+       <p></p>
+       <div></div>
+       <!-- hello -->
+    </div>
+    <input type="button" value="click here" onclick="show()">
+</body>
+</html>

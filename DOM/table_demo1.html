@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function show(){
+            //acess tbody by id
+           let ob=document.getElementById("b1")
+           console.log(ob)
+           console.log("******")
+           //acess rows of perticular tbody
+           let rows=ob.rows
+           console.log(rows)
+           for (const row of rows){
+            console.log(row)
+            //access cells from the row
+            let cols=row.cells
+            console.log(cols)
+            for(const c of cols){
+                console.log(c.innerText)
+            }
+           }
+        }
+    </script>
+</head>
+<body>
+    <table border="1" id="table1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>ADDRESS</th>
+            </tr>
+        </thead>
+        <tbody id="b1">
+            <tr>
+                <td>1</td>
+                <td>abc</td>
+                <td>xyz</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>ppp</td>
+                <td>qqq</td>
+            </tr>
+        </tbody>
+        <tbody id="b2">
+            <tr>
+                <td>3</td>
+                <td>zzz</td>
+                <td>yyy</td>
+            </tr>
+        </tbody>
+    </table>
+    <input type="button" value="click here" onclick="show()">
+</body>
+</html>

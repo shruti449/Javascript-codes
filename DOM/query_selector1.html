@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function show(){
+            let ob=document.querySelectorAll("ul>li:last-child")
+            for(const e of ob){
+                console.log(e)
+                console.log(e.innerHTML)
+            }
+            let ob1=document.querySelector(".class1")
+            ob1.style.backgroundColor="red"
+            ob1.style.width="25px"
+        }
+    </script>
+</head>
+<body>
+    <ul>
+        <li>A</li>
+        <li>B</li>
+        <li class="class1">C</li>
+        <li>D</li>
+    </ul>
+    <ul></ul>
+        <li>X</li>
+        <li>Y</li>
+    </ul>
+    <br>
+    <br>
+    <input type="button" value="click here" onclick="show()">
+</body>
+</html>

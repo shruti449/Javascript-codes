@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function show(){
+            //get all rows
+            let ob=document.getElementById("table1")
+            //get all rows from table
+            let arr=ob.rows
+            console.log(arr)
+            //get all rows from tbody
+            let bodies=ob.tBodies
+            console.log(bodies)
+            console.log("******")
+            for(const body of bodies){
+                console.log(`body with id ${body.id}`)
+                for(const row of body.rows){
+                    console.log(row)
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <table border="1" id="table1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>ADDRESS</th>
+            </tr>
+        </thead>
+        <tbody id="b1">
+            <tr>
+                <td>1</td>
+                <td>abc</td>
+                <td>xyz</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>ppp</td>
+                <td>qqq</td>
+            </tr>
+        </tbody>
+        <tbody id="b2">
+            <tr>
+                <td>3</td>
+                <td>zzz</td>
+                <td>yyy</td>
+            </tr>
+        </tbody>
+    </table>
+    <input type="button" value="click here" onclick="show()">
+</body>
+</html>

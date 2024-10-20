@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function show(){
+            let ob1=document.getElementById("d1")
+            let ob2=document.getElementById("d2")
+            ob1.innerText="<br><b>Hello</b>"
+            ob2.innerHTML="<br><b>Hello</b>"
+            //size
+            ob2.style.width="200px"
+            ob2.style.height="200px"
+            ob2.style.backgroundColor="red"
+        }
+    </script>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <br>
+    <input type="button" value="click here" onclick="show()">
+</body>
+</html>

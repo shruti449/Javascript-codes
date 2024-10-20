@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        function show() {
+            let p1 = document.createElement("p")
+            p1.innerText = "paragraph added by JS"
+            //document.body.append(p1)
+            document.body.prepend(p1)
+            //add paragraph into div tag
+            let p2 = document.createElement("p")
+            p2.innerText = "paragraph added into div tag by JS"
+            //find div tag 
+            let ob = document.getElementById("d1")
+            ob.style.backgroundColor = "red"
+            ob.append(p2)
+
+            //paragraph before div tag
+            let p3 = document.createElement("p")
+            p3.innerText = "paragraph added before div tag by JS"
+            ob.before(p3)
+
+            //paragraph after div tag
+            let p4 = document.createElement("p")
+            p4.innerText = "paragraph added after div tag by JS"
+            ob.after(p4)
+
+            //create textnode
+            let br = document.createElement("br")
+            document.body.append(br)
+            let textNode = document.createTextNode("this is textnode created by JS")
+            document.body.append(textNode)
+        }
+    </script>
+</head>
+
+<body>
+    <div style="height: 100px; width:100px; " id="d1">
+        this is div tag
+    </div>
+    <input type="button" value="click here" onclick="show()">
+</body>
+
+</html>

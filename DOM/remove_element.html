@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+    .class1{
+        height: 100px;
+        width: 100px;
+        background-color: aqua;
+    }
+   </style>
+   <script>
+    function create(){
+        let ob1=document.createElement("div")
+        ob1.id="d1"
+        ob1.className="class1"
+        ob1.innerText="this is div tag created by JS"
+        document.body.append(ob1)
+    }
+
+        function show(){
+            let ob2=document.getElementById("d1")
+            ob2.remove()
+        }
+
+    
+   </script>
+</head>
+<body>
+    <input type="button" value="create" onclick="create()">
+    <br>
+    <input type="button" value="remove" onclick="show()">
+</body>
+</html>
