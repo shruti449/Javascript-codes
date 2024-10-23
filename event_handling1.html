@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function hello(){
+            alert("hello world")
+        }
+        function show(e){
+            let ob=document.createElement("input")
+            ob.type="button"
+            ob.value="sayhello"
+            //ob.onclick=hello
+            //****************
+            //ob.onclick=function (){
+              //  alert("demo event handling")
+            //}
+            //****************
+            ob.onclick=()=>alert("using arrow function")
+            document.body.append(ob)
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="click here" onclick="show(event)">
+    <br>
+</body>
+</html>

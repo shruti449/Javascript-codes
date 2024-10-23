@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        function hello() {
+            alert("hello from normal function")
+        }
+        function show(e) {
+            let ob = document.createElement("input")
+            ob.type = "button"
+            ob.value = "sayhello"
+            ob.id = "b1"
+            ob.addEventListener("click", hello)
+            //************
+            //ob.addEventListener("click",function (){
+            //alert("using addEventListner")
+            //})
+            //**************
+            // ob.addEventListener("click",()=>alert("by arrow function"))
+            //*************
+            document.body.append(ob)
+        }
+        function remove() {
+            let ob2 = document.getElementById("b1")
+            ob2.removeEventListener("click", hello)
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="click here" onclick="show(event)">
+    <br>
+    <input type="button" value="remove" onclick="remove()">
+</body>
+
+</html>

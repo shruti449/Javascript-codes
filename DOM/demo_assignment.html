@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function create() {
+            let ul = document.createElement("ul")
+            let li1 = document.createElement("li")
+            let li2 = document.createElement("li")
+            let li3 = document.createElement("li")
+            let li4 = document.createElement("li")
+            li1.innerText = "item one"
+            li2.innerText = "item two"
+            li3.innerText = "item three"
+            li3.id = "a1"
+            li4.innerText = "item four"
+            document.body.append(ul)
+            ul.append(li1)
+            ul.append(li2)
+            ul.append(li3)
+            ul.append(li4)
+            console.log(ul)
+        }
+        function display() {
+            let ob=document.querySelectorAll("ul>li")
+            for(const e of ob){
+                if(e.innerHTML=="item three"){
+                    console.log(e.style.color="green")
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="create" onclick="create()">
+    <br>
+    <input type="button" value="display" onclick="display()">
+    <br>
+</body>
+</html>
